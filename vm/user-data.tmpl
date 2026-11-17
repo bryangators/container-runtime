@@ -1,0 +1,29 @@
+#cloud-config
+# Provisioning for the container-runtime test VM. @SSH_PUBKEY@ is filled in by vm.sh.
+ssh_authorized_keys:
+  - @SSH_PUBKEY@
+
+package_update: false
+packages:
+  - golang
+  - make
+  - rsync
+  - tar
+  - strace
+  - util-linux
+  - procps-ng
+  - psmisc
+  - iproute
+  - iputils
+  - nftables
+  - podman
+  - skopeo
+  - man-db
+  - man-pages
+  - vim-minimal
+
+write_files:
+  - path: /etc/motd
+    content: |
+      container-runtime test VM. Break things here, not on the host.
+      Repo is synced to ~/container-runtime by `make vm-sync` / `make vm-run`.

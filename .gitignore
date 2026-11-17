@@ -1,0 +1,9 @@
+# build output
+bin/
+
+# VM disk images, ssh key, logs
+vm/.state/
+
+# local Claude Code overrides
+.claude/settings.local.json
+.claude/allow-go-edits

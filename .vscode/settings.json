@@ -1,0 +1,17 @@
+{
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "go.lintOnSave": "package",
+  "go.vetOnSave": "package",
+  "gopls": {
+    "ui.semanticTokens": true,
+    "build.env": { "GOOS": "linux" }
+  },
+  "github.copilot.enable": { "go": false },
+  "editor.inlineSuggest.enabled": false
+}
